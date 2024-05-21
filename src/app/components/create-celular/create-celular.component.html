@@ -1,0 +1,79 @@
+<div class="contenedor mt-[5rem]">
+  <h1 class="text-[3.6rem] font-bold">Crear Celular</h1>
+
+  <a
+    class="px-[2rem] py-[1rem] rounded-xl hover:bg-green-500/80 transition-all duration-300 bg-green-500 text-white font-bold"
+    href="/"
+    >Ver Celulares</a
+  >
+
+  <form class="bg-slate-100 mt-[4rem] rounded-xl p-[2rem]" (ngSubmit)="insertarCelular()">
+    <div class="grid grid-cols-2 gap-[2rem]">
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Marca</label>
+        <input
+        name="marca"
+        [(ngModel)] = "celular.marca"
+          class="p-[1rem] rounded-lg"
+          type="text"
+          placeholder="Ej. Samsung"
+        />
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Año</label>
+        <input
+        name="anio"
+        [(ngModel)] = "celular.anio" class="p-[1rem] rounded-lg" type="number" placeholder="2020" />
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Precio</label>
+        <input
+        name="precio"
+
+        [(ngModel)] = "celular.precio" class="p-[1rem] rounded-lg" type="number" placeholder="120" />
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Serial</label>
+        <input
+        name="serial"
+
+        [(ngModel)] = "celular.serial" class="p-[1rem] rounded-lg" type="text" placeholder="AAA000" />
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Sistema</label>
+        <select
+        name="sistema"
+        [(ngModel)] = "celular.sistema"  class="p-[1rem] rounded-lg">
+          <option value="android">Android</option>
+          <option value="ios">IOS</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Gama</label>
+        <select         name="gama"
+        [(ngModel)] = "celular.gama" class="p-[1rem] rounded-lg">
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-[1rem]">
+        <label class="font-bold">Serial</label>
+        <input
+        name="createdAt"
+
+        [(ngModel)] = "celular.createdAt" class="p-[1rem] rounded-lg" type="date"  />
+      </div>
+      
+    </div>
+
+    <input     class="px-[2rem] mt-[3rem] cursor-pointer  py-[1rem] rounded-xl hover:bg-green-500/80 transition-all duration-300 bg-green-500 text-white font-bold"
+    type="submit" value="Crear Celular">
+  </form>
+</div>

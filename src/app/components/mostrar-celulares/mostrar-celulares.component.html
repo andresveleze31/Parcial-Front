@@ -1,0 +1,37 @@
+<div class="contenedor mt-[5rem] ">
+  <h1 class="text-[3.6rem] font-bold">Inventario de Celulares</h1>
+
+  <a
+    class="px-[2rem] py-[1rem] rounded-xl hover:bg-green-500/80 transition-all duration-300 bg-green-500 text-white font-bold"
+    href="/crear-celular"
+    >Crear Nuevo Celular</a
+  >
+
+  <div>
+    <table class="w-full mt-[3rem]">
+      <thead class="bg-slate-200 w-full">
+        <tr class="w-full">
+          <th class="text-start p-[1rem]">Marca</th>
+          <th class="text-start p-[1rem]">Año</th>
+          <th class="text-start p-[1rem]">Precio</th>
+          <th class="text-start p-[1rem]">Serial</th>
+          <th class="text-start p-[1rem]">Sistema</th>
+          <th class="text-start p-[1rem]">Gama</th>
+          <th class="text-start p-[1rem]">Fecha Compra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let celular of celulares">
+          <td class="text-start p-[1rem]">{{celular.marca}}</td>
+          <td class="text-start p-[1rem]">{{celular.anio}}</td>
+          <td class="text-start p-[1rem]">{{celular.precio}}</td>
+          <td class="text-start p-[1rem]">{{celular.serial}}</td>
+          <td class="text-start p-[1rem]">{{celular.sistema}}</td>
+          <td class="text-start p-[1rem]">{{celular.gama}}</td>
+          <td class="text-start p-[1rem]">{{(celular.createdAt)}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
